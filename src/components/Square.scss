@@ -1,0 +1,21 @@
+.Square {
+    height: 100px;
+    width: 100px;
+
+    &-light {
+        background-color: #dff0df;
+    }
+    
+    &-dark {
+        background-color: #35c435;
+    }
+
+    @for $i from 1 through 8 {
+        @for $j from 1 through 8 {
+            &-#{$i}#{$j} {
+                grid-row: #{$i} / #{$i +1};
+                grid-row: #{$j} / #{$j +1};
+            }
+        }
+    }
+}
