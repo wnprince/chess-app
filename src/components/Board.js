@@ -4,17 +4,19 @@ import './Board.scss';
 
 class Board extends React.Component {
     render() {
-        let row = [];
+        let board = [];
         for(let i=1;i<=8;i++){
+            let row = [];
             for(let j=1;j<=8;j++) {
-                // eslint-disable-next-line
-                row.push(<Square color={( ((i%2 !== 0) && (j%2 !== 0) || (i%2 === 0) && (j%2 === 0)) ? 'light' : 'dark')} coord={`${i}${j}`}/>);
+                let name = `${String.fromCharCode(96+i)}${(117-j) % 9}`;
+                row.push(<Square key={name} name={name} color={( ((i%2 !== 0) && (j%2 !== 0) || (i%2 === 0) && (j%2 === 0)) ? 'light' : 'dark')} coord={`${i}${j}`}/>);
             }
+            board.push(row);
         }
         return (
-            <div className="wrapper">
-                {row}
-            </div>
+            <section className="Square-wrapper">
+                {board}
+            </section>
         )
     }
 }

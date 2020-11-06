@@ -22,7 +22,15 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-mixed-operators": "off",
+      "eqeqeq": "off"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AayushK47/chess-coordinates-trainer.git"
   },
   "browserslist": {
     "production": [

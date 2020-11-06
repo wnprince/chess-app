@@ -1,10 +1,12 @@
-.wrapper {
-    height: 512px;
-    width: 512px;
-    margin: 5% auto;
-    display: grid;
-    row-gap: 0;
-    row-gap: 0;
-    grid-template-rows: 100px;
-    grid-template-columns: 100px;
+.Square {
+    &-wrapper {
+        height: 512px;
+        width: 512px;
+        margin: 50px 20px;
+        display: grid;
+        row-gap: 0;
+        row-gap: 0;
+        grid-template-rows: 100px;
+        grid-template-columns: 100px;
+    }
 }

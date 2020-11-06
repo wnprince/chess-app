@@ -1,13 +1,13 @@
 .Square {
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 110px;
 
     &-light {
-        background-color: #dff0df;
+        background-color: #eeeed2;
     }
     
     &-dark {
-        background-color: #35c435;
+        background-color: #769656;
     }
 
     @for $i from 1 through 8 {
