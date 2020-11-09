@@ -1,9 +1,12 @@
 import React from 'react';
 import Square from './Square';
+import { GameContext } from '../contexts/GameContext';
 import './Board.scss';
 
 class Board extends React.Component {
+    static contextType = GameContext;
     render() {
+        console.log(this.context);
         let board = [];
         for(let i=1;i<=8;i++){
             let row = [];
@@ -14,7 +17,7 @@ class Board extends React.Component {
             board.push(row);
         }
         return (
-            <section className="Square-wrapper">
+            <section className="Board-wrapper">
                 {board}
             </section>
         )

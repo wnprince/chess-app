@@ -1,0 +1,21 @@
+.Scoreboard {
+    &-wrapper {
+        height: 320px;
+        width: 480px;
+        background-color: #272421;
+        color: white;
+        grid-column: 2 / 3;
+    }
+
+    &-heading {
+        padding: 15px;
+        font-weight: 800;
+        font-size: x-large;
+    }
+
+    &-timer {
+        padding: 15px;
+        font-weight: 800;
+        font-size: medium;
+    }
+}

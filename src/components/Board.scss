@@ -1,8 +1,8 @@
-.Square {
+.Board {
     &-wrapper {
         height: 512px;
         width: 512px;
-        margin: 50px 20px;
+        grid-row: 1 / 2;
         display: grid;
         row-gap: 0;
         row-gap: 0;
