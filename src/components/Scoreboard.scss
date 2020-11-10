@@ -1,6 +1,6 @@
 .Scoreboard {
     &-wrapper {
-        height: 320px;
+        height: 220px;
         width: 480px;
         background-color: #272421;
         color: white;
@@ -17,5 +17,12 @@
         padding: 15px;
         font-weight: 800;
         font-size: medium;
+    }
+
+    &-question {
+        text-align: center;
+        padding: 15px;
+        font-weight: 800;
+        font-size: 75px;
     }
 }

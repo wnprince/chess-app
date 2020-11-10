@@ -13,6 +13,7 @@ class Scoreboard extends React.Component{
     }
 
     componentDidMount() {
+        console.log();
         this.interval = setInterval(() => {
             const { seconds, minutes } = this.state
 
@@ -24,6 +25,7 @@ class Scoreboard extends React.Component{
             if (seconds === 0) {
                 if (minutes === 0) {
                     clearInterval(this.interval);
+                    this.context.gameOver();
                 } else {
                     this.setState(({ minutes }) => ({
                         minutes: minutes - 1,
@@ -31,7 +33,8 @@ class Scoreboard extends React.Component{
                     }))
                 }
             }
-        }, 1000)
+        }, 1000);
+        this.context.changeQuestion();
     }
 
     componentWillUnmount() {
@@ -52,7 +55,7 @@ class Scoreboard extends React.Component{
             <section className="Scoreboard-wrapper">
                 <div className="Scoreboard-heading">Your Score: { this.context.score }</div>
                 <div className="Scoreboard-timer">Time Left: { `${minutes}:${seconds}` }</div>
-                <div>{}</div>
+                <div className="Scoreboard-question">{this.context.question}</div>
             </section>
         )
     }

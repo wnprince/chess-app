@@ -6,7 +6,6 @@ import './Board.scss';
 class Board extends React.Component {
     static contextType = GameContext;
     render() {
-        console.log(this.context);
         let board = [];
         for(let i=1;i<=8;i++){
             let row = [];

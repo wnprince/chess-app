@@ -1,5 +1,5 @@
 {
-  "name": "coordinates-trainer",
+  "name": "chess-coordinates-trainer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

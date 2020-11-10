@@ -1,15 +1,19 @@
 import React from 'react';
 import './Square.scss';
+import { GameContext } from '../contexts/GameContext';
 
 class Square extends React.Component {
-
+    static contextType = GameContext;
     constructor(props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(){
-        console.log(this.props.name);
+        if((!this.context.isGameOver)  && (this.context.question === this.props.name)){
+            this.context.updateScore();
+            this.context.changeQuestion();
+        }
     }
 
     render(){
