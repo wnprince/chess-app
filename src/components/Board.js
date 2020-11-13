@@ -9,10 +9,6 @@ class Board extends React.Component {
     constructor(props) {
         super(props);
         this.setBoard = this.setBoard.bind(this);
-
-        this.state = {
-            isWhite: false
-        }
     }
 
     setBoard() {
@@ -21,7 +17,7 @@ class Board extends React.Component {
             let row = [];
             for(let j=1;j<=8;j++) {
                 let rank, file;
-                if(this.state.isWhite){
+                if(this.context.isWhite){
                     file = 96 + i;
                     rank = (117 - j) % 9;
                 } else {

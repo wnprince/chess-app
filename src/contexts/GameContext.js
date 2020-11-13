@@ -7,12 +7,14 @@ export class GameContextProvider extends React.Component {
         this.state = {
             question: null,
             score: 0,
-            isGameOver: false
+            isGameOver: false,
+            isWhite: null
         }
 
         this.changeQuestion = this.changeQuestion.bind(this);
         this.updateScore = this.updateScore.bind(this);
         this.gameOver = this.gameOver.bind(this);
+        this.updateIsWhite = this.updateIsWhite.bind(this);
     }
 
     changeQuestion() {
@@ -37,6 +39,12 @@ export class GameContextProvider extends React.Component {
         });
     }
 
+    updateIsWhite(value) {
+        this.setState({
+            isWhite: value
+        });
+    }
+
     render() {
         return (
             <GameContext.Provider 
@@ -45,7 +53,8 @@ export class GameContextProvider extends React.Component {
                         ...this.state, 
                         changeQuestion: this.changeQuestion, 
                         updateScore: this.updateScore,
-                        gameOver: this.gameOver
+                        gameOver: this.gameOver,
+                        updateIsWhite: this.updateIsWhite
                     }
                 }
             >

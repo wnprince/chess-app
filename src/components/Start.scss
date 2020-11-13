@@ -26,6 +26,10 @@
         height: 60px;
     }
 
+    &-form-items:hover {
+        border: solid 2px #7fa650;
+    }
+
     &-button {
         height: 50px;
         display : block;
@@ -39,4 +43,12 @@
         box-shadow: 5px 5px 7px #536d33;
         margin: 0 auto;
     }
+
+    &-selected {
+        border: solid 2px #7fa650;
+    }
+}
+
+a {
+    text-decoration: none;
 }
