@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import MediaQuery from 'react-responsive'
+
 import Start from './components/Start';
 import Game from './components/Game';
 import { GameContextProvider } from './contexts/GameContext';
@@ -19,12 +21,19 @@ class App extends React.Component {
     ]
     return (
       <div className="App">
-        <GameContextProvider possibleQuestions={possibleQuestions} >
-          <Switch>
-            <Route exact path='/play' component={ Game }/>
-            <Route exact path='/' component={ Start }/>
-          </Switch>
-        </GameContextProvider>
+        <MediaQuery minWidth={1800}>
+          <GameContextProvider possibleQuestions={possibleQuestions} >
+            <Switch>
+              <Route exact path='/play' component={ Game }/>
+              <Route exact path='/' component={ Start }/>
+            </Switch>
+          </GameContextProvider>
+        </MediaQuery>
+        <MediaQuery maxWidth={1800}>
+        <div className="App-small">
+          <h1>This app can only be accessed on devices with screen size >= 1800</h1>
+        </div>
+        </MediaQuery>
       </div>
     );
   }
