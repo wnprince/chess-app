@@ -5,6 +5,7 @@ import MediaQuery from 'react-responsive'
 import Start from './components/Start';
 import Game from './components/Game';
 import { GameContextProvider } from './contexts/GameContext';
+import Modal from './components/Modal';
 import './App.scss';
 
 class App extends React.Component {
@@ -27,11 +28,12 @@ class App extends React.Component {
               <Route exact path='/play' component={ Game }/>
               <Route exact path='/' component={ Start }/>
             </Switch>
+            <Modal />
           </GameContextProvider>
         </MediaQuery>
         <MediaQuery maxWidth={1800}>
         <div className="App-small">
-          <h1>This app can only be accessed on devices with screen size >= 1800</h1>
+          <h1>{`This app can only be accessed on devices with screen size >= 1800`}</h1>
         </div>
         </MediaQuery>
       </div>

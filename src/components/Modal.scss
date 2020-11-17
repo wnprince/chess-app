@@ -1,0 +1,27 @@
+.Modal {
+    &-wrapper {
+        border-radius: 10px;
+        text-align: center;
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        height: 35vh;
+        width: 25vw;
+    }
+
+    &-button {
+        height: 50px;
+        display : block;
+        width: 200px;
+        border-radius: 10px;
+        background-color: #7fa650;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bolder;
+        box-shadow: 5px 5px 7px #536d33;
+        margin: 0 auto;
+    }
+}

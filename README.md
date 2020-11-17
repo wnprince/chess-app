@@ -2,6 +2,8 @@
 
 A simple app to learn the chess board coordinates.
 
+**Live Preview:** [https://chess-coordinates-trainer.netlify.app/](https://chess-coordinates-trainer.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
