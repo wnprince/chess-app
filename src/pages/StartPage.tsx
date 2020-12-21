@@ -1,6 +1,7 @@
 import React from 'react';
+import { RouteComponentProps } from '@reach/router';
 
-const StartPage: React.FC = () => {
+const StartPage: React.FC<RouteComponentProps> = () => {
     return (
         <div className="h-screen w-screen flex items-center justify-center bg-main">
             <div className="h-1/3 w-5/6 md:w-3/4 lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center bg-secondary rounded-lg ">
