@@ -9,24 +9,23 @@ const Board = () => {
         for(let j=1;j<=8;j++) {
             let rank, file;
             if(true){
-                file = 96 + i;
-                rank = (117 - j) % 9;
+                file = 96 + j;
+                rank = (117 - i) % 9;
             } else {
-                file = 105-i;
-                rank = j;
+                file = 105-j;
+                rank = i;
             }
             let name = `${String.fromCharCode(file)}${rank}`;
-            // eslint-disable-next-line
-            row.push(<Square key={name} name={name} color={( ((i%2 !== 0) && (j%2 !== 0) || (i%2 === 0) && (j%2 === 0)) ? 'light' : 'dark')} coord={`${i}${j}`}/>);
+            row.push(<Square key={name} name={name} color={( ((i%2 !== 0) && (j%2 !== 0) || (i%2 === 0) && (j%2 === 0)) ? 'light' : 'dark')} />);
         }
         board.push(row);
     }
 
     console.log(board);
     return (
-        <div className="p-1">
-            { board.map(row => (
-                <div className="flex flex-row">
+        <div className="p-1 mt-3 flex flex-col items-center">
+            { board.map((row, i) => (
+                <div key={i} className="flex flex-row">
                     { row }
                 </div>
             )) }

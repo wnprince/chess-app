@@ -1,15 +1,10 @@
 import React from 'react';
-import Scoreboard from './components/Scoreboard'; 
-import Board from './components/Board';
+
+import StartPage from './pages/StartPage';
 import './App.css';
 
-function App() {
-  return (
-    <div className=" h-screen pt-1 bg-main">
-      <Scoreboard />
-      <Board />
-    </div>
-  );
+const App: React.FC = () => {
+  return <StartPage />
 }
 
 export default App;
