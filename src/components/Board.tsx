@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Square from './Square';
+import { AppContext } from '../context/AppContext';
 
 const Board = () => {
+    const ctx = useContext(AppContext);
     let board = [];
     for(let i=1;i<=8;i++){
         let row = [];
         for(let j=1;j<=8;j++) {
             let rank, file;
-            if(true){
+            if(ctx?.isWhite){
                 file = 96 + j;
                 rank = (117 - i) % 9;
             } else {

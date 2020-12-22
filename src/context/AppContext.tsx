@@ -7,6 +7,9 @@ interface AppContextType {
     changeQuestion: () => void;
     gameOver: Boolean;
     toggleGameOver: () => void;
+    isWhite: Boolean;
+    updateIswhite: (value: any) => void,
+    reset: () => void;
 }
 
 export const AppContext = createContext<AppContextType | null>(null);
@@ -18,6 +21,7 @@ interface Props {
 export const AppContextProvider: React.FC<Props> = (props) => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
+    const [isWhite, setIsWhite] = useState(true);
 
     const possibleQuestions = [
         'h8', 'h7', 'h6', 'h5', 'h4', 'h3', 'h2', 'h1',
@@ -39,13 +43,26 @@ export const AppContextProvider: React.FC<Props> = (props) => {
         setGameOver(!gameOver);
     }
 
+    function updateIswhite(value: any) {
+        setIsWhite(value)
+    }
+
+    function reset() {
+        setScore(0);
+        setIsWhite(true);
+        setGameOver(true);
+    }
+
     const contextValue: AppContextType = {
         score,
         setScore,
         question,
         changeQuestion,
         gameOver,
-        toggleGameOver
+        toggleGameOver,
+        isWhite,
+        updateIswhite,
+        reset
     }
 
     return <AppContext.Provider value={contextValue}>

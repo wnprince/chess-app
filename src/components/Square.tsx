@@ -42,7 +42,7 @@ const Square: React.FC<Props> = (props) => {
     }
 
     function onClicked() {
-        if(ctx?.gameOver){
+        if(!ctx?.gameOver){
             if(props.name === ctx?.question){
                 ctx?.setScore(ctx?.score + 1);
                 ctx?.changeQuestion();
