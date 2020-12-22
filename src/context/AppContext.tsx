@@ -20,7 +20,7 @@ interface Props {
 
 export const AppContextProvider: React.FC<Props> = (props) => {
     const [score, setScore] = useState(0);
-    const [gameOver, setGameOver] = useState(true);
+    const [gameOver, setGameOver] = useState(false);
     const [isWhite, setIsWhite] = useState(true);
 
     const possibleQuestions = [
@@ -50,7 +50,7 @@ export const AppContextProvider: React.FC<Props> = (props) => {
     function reset() {
         setScore(0);
         setIsWhite(true);
-        setGameOver(true);
+        setGameOver(false);
     }
 
     const contextValue: AppContextType = {

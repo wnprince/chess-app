@@ -8,8 +8,8 @@ class Timer extends React.Component<{}, { minutes: number, seconds: number }> {
     constructor(props: object) {
         super(props);
         this.state = {
-            minutes: 3,
-            seconds: 0,
+            minutes: 0,
+            seconds: 5,
         };
         this.interval = setInterval(() => console.log('dummy'), 0);
     }
