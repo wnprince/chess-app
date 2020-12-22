@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Chess Coordinates Trainer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web-based that can help you learn chess coordinates easily.
 
-## Available Scripts
+**Live Preview**: https://chess-coordinates-trainer.netlify.app/
+## Introduction
 
-In the project directory, you can run:
+In the game of chess, you have 64 squares on the board. 64 squares where you can place your pieces. Each square has its own name. Remembering the name of these squares in key for learning, understanding and improving in chess. But learning the names of these squares is no easy feat, especially for beginners. In order to make this learning process easy, I created a simple game using which you can easily learn chess coordinates.
 
-### `npm start`
+## How to play
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- In the landing page, select the pieces you want to play with (white, black or random) and hit play.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- In the game screen, you see a scoreboard and a chessboard. The scoreboard flashes current score, time left and a coordinate of a square. Click on the square with matching coordinate to earn a point. Score any many points as you can until your time runs out.
 
-### `npm test`
+## Run Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this web app locally, simply follow these steps:
 
-### `npm run build`
+- Clone this repository with the following command :-
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/AayushK47/chess-coordinates-trainer.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Run npm install to install all the dependencies:-
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm install
+```
 
-### `npm run eject`
+- Run npm start to start the app on port 3000:-
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Note** :- You need to have node.js installed on your local machine to run this app locally.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Frameworks used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />](#)
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" />](#)
 
-## Learn More
+<br />
+<br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[MIT License](https://github.com/AayushK47/chess-coordinates-trainer/blob/master/LICENSE) @ [Aayush Kurup](https://github.com/AayushK47)
